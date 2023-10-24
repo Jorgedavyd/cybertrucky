@@ -4,13 +4,6 @@ import torch
 import torchvision.transforms as tt
 
 #Defining models classes
-class Model(ImageClassificationBase):
-    def __init__(self, model):
-        super().__init__()
-        self.model = model
-    def forward(self, xb):
-        return self.model(xb)
-
 def Shufflenet():
     from torchvision.models import shufflenet_v2_x0_5, ShuffleNet_V2_X0_5_Weights
     model = shufflenet_v2_x0_5()
